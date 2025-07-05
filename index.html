@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te multiamoinfinito mi princesa</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Ocultamos el iframe para que no se vea */
+        iframe {
+            width: 0;
+            height: 0;
+            border: 0;
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Botón para activar la música -->
+    <button id="playMusicBtn">
+        Reproducir música
+    </button>
+
+    <div id="playerContainer"></div>
+
+    <div>
+        <!-- Aquí eliminé el iframe original para que no suene sin permiso -->
+    </div>
+
+    <div class="container">
+        <!-- Floating hearts background -->
+        <div class="hearts">
+
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Te amo, mi princesita</h1>
+            <div class="heart-row">
+                <span class="heart-icon">💕</span>
+                <span class="heart-icon large">👑</span>
+                <span class="heart-icon">💕</span>
+            </div>
+        </header>
+
+        <!-- Main apology section -->
+        <section class="apology-section">
+            <div class="card">
+                <h2>Desde lo más profundo de mi corazón</h2>
+                <div class="message">
+                    <p>Holi amor, si estás leyendo este textito es que probablemente estés conmigo y quería, por lo
+                        menos, pedirte disculpas por todo lo
+                        que nos ha pasado mientras estuvimos a distancia con esta mini paginita web ya que es algo que
+                        estuve haciendo varios días
+                        con todo el amor y la energía que me quedaba.</p>
+
+                    <p>Sé que durante todo este tiempo has estado pensando en si seguir conmigo o no y probablemente
+                        ahora mismo pienses que no me quieres en tu
+                        vida. Por eso, me gustaría que por favor no lo pensaras tan friamente y que entendieras el daño
+                        que ha podido hacer tanto la distáncia como
+                        los mensajes de texto y las discusiones o llamadas. Por favor, no dejes que esto haga que todo
+                        lo que hemos
+                        luchado por seguir juntos se vaya a la basura por este problema ya que para mi dejarlo todo por
+                        esto me parece una tontería, solo
+                        que nos debemos de entender y escuchar mejor.</p>
+
+                    <p>Sé que mi comportamiento ha sido de persona gilipollas, infantil e inmadura pero por favor,
+                        piensa que yo también estoy aprendiendo ya que
+                        también es mi primera relación, sé que haciendo esto me estoy dejando humilar y me estoy arrastrando
+                        hasta el límite pero se te olvidó que te hice la
+                        promesa de nunca dejar de pelear por nosotros y es lo que estoy haciendo.</p>
+
+                    <p>Me gustaría pensar que todo lo sucedido más la distancia han hecho que nos olvidemos de ser
+                        nosotros y lo mucho que
+                        nos amamos pero yo no quiero olvidarlo ni lo haré nunca. Echo de menos a esa Zöe llorona y con
+                        el corazón tan bonito que
+                        hacía que el mío se derritiera al instante. Por eso, pido de todo corazón que por favor no
+                        pensemos en alejarnos ya que me gustaría
+                        tener la oportunidad de demostrarte lo que he aprendido en este tiempo pensando ya que soy
+                        consciente del tipo de persona que somos tanto tú como yo.
+                    </p>
+
+                    <p>Por último me gustaría que supieras que soy consciente de que tienes miedo a que te haga más daño
+                        pero
+                        de verdad te juro por mi alma y por mi vida de que si vuelvo a hacerte daño seré yo mismo el que
+                        me vaya.
+                        Quiero que sepas que nunca pero nunca más o por lo menos te juro que lo intentaré con todas mis
+                        fuerzas que
+                        no te quiero hacer ningún daño. Si abres la siguiente pestañita verás unas poquitas promesas que
+                        me he
+                        hecho tanto a mi como a nuestra relación para que sepas lo mucho que me voy a esforzar en los
+                        dos
+                    </p>
+                </div>
+
+                <button class="promise-btn" onclick="togglePromise()">Leer mis promesas hacia ti</button>
+
+                <div id="promise" class="promise-section hidden">
+                    <h3>Unas pocas de mis promesitas <3 </h3>
+                            <ul class="promise-list">
+                                <li>💕 Te prometo mejorar por los dos para que todo nos vaya mejor</li>
+                                <li>💕 Te prometo seguir esforzandome en aprender a controlar mis emociones</li>
+                                <li>💕 Te prometo respetar tu privacidad y espacio cuando lo necesites (pero siempre con
+                                    buena comunicación)</li>
+                                <li>💕 Te prometo que te cuidaré, te apoyaré y te acompañaré tanto en loos momentos
+                                    difíciles como en los fáciles</li>
+                                <li>💕 Te prometo entender que tienes límites y no tienes la misma libertad que yo</li>
+                                <li>💕 Te prometo que estaré agradecido cada día de tenerte a mi lado</li>
+                                <li>💕 Te prometo que grabaré miles de tiktoks contigo (me encantaría)</li>
+                            </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Video section -->
+        <section class="video-section">
+            <div class="card" style="max-width: 320px; margin: 0 auto;">
+                <h2>La primera vez que nos vimos💗</h2>
+                <video width="100%" height="auto" controls>
+                    <source src="27bf0482bab241bbacd26550f746cce7.mp4" type="video/mp4" />
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </section>
+
+
+        <!-- Reasons I love you -->
+        <section class="love-reasons">
+            <div class="card">
+                <h2>Super mini baúl de recuerdos (pondria un montón mas) 😊</h2>
+                <div class="reason-display">
+                    <p id="current-reason">You make every day brighter with your smile</p>
+                    <img id="reason-image" src="casaAbuelita.jpg" alt="Memory" />
+                </div>
+
+                <div class="reason-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Final message -->
+        <section class="final-section">
+            <div class="card">
+                <h2>PD:</h2>
+                <p>Después de todo este tiempo, me di cuenta del amor que te tengo tanto a ti como a tus seres queridos y me gustaría
+                    que todo esto saliera bien. Esta mini web no la he hecho para obligarte a nada pero solo quería demostrarte que yo no
+                me he rendido aún y que si confío en nosotros pero también necesito de tu parte. Probablemente con todo esto me haya quedado 
+            corto pero esto para mí es el mínimo que haría por ti toda mi vida, por favor, piensa en todo lo que nos queda por pasar juntos.</p>
+                <div class="signature">Te multiamoinfinito, Zöe Guillaumet Segura.💗👑</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Toggle promise section
+        function togglePromise() {
+            const promise = document.getElementById('promise');
+            const btn = document.querySelector('.promise-btn');
+
+            if (promise.classList.contains('hidden')) {
+                promise.classList.remove('hidden');
+                btn.textContent = 'Guardar las promesitas';
+            } else {
+                promise.classList.add('hidden');
+                btn.textContent = 'Leer mis promesas';
+            }
+        }
+
+        // Rotating love reasons
+        const reasons = [
+            {
+                text: "El dia que nos quedamos a mimir en casa de tu super abuelita😴",
+                img: "casaAbuelita.jpg"
+            },
+            {
+                text: "Ese día tan precioso que tuvimos en el que me maquillaste (slay)💅",
+                img: "DiaDeMaquillaje.jpg"
+            },
+            {
+                text: "Nuestra cita en el acuariooo🐠",
+                img: "CitaAquarium.jpg"
+            },
+            {
+                text: "Nuestra fotito de verano fav💗",
+                img: "fotito fav.jpg"
+            },
+            {
+                text: "Tu primera fotito con mia😔",
+                img: "fotoconmia.jpg"
+            },
+            {
+                text: "Loki chikitooooo 🖤",
+                img: "lokiChikito.jpg"
+            },
+            {
+                text: "Paseando a los perritos de tus tíos 😭",
+                img: "paseandoPerritos.jpg"
+            },
+            {
+                text: "El primer ramo de tulipanes que te di🌷",
+                img: "primerRamito.jpg"
+            },
+            {
+                text: "Nuestras fotitos en la puestaaa☀️",
+                img: "sesion de fotos.jpg"
+            },
+            {
+                text: "Tu mejor cover y el regalito del marco🎀",
+                img: "DmYRegalos.jpg"
+            },
+        ];
+
+
+        let currentIndex = 0;
+
+        function rotateReasons() {
+            const reasonElement = document.getElementById('current-reason');
+            const imageElement = document.getElementById('reason-image');
+            const dots = document.querySelectorAll('.dot');
+
+            dots[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % reasons.length;
+            dots[currentIndex].classList.add('active');
+
+            reasonElement.style.opacity = '0';
+            imageElement.style.opacity = '0';
+
+            setTimeout(() => {
+                reasonElement.textContent = reasons[currentIndex].text;
+                imageElement.src = reasons[currentIndex].img;
+                reasonElement.style.opacity = '1';
+                imageElement.style.opacity = '1';
+            }, 300);
+        }
+
+
+        setInterval(rotateReasons, 3000);
+
+        // Button to play music (hidden iframe)
+        document.getElementById('playMusicBtn').addEventListener('click', function () {
+            if (!document.getElementById('ytPlayer')) {
+                const iframe = document.createElement('iframe');
+                iframe.id = 'ytPlayer';
+                iframe.src = "https://www.youtube.com/embed/-pHfPJGatgE?autoplay=1&loop=1&playlist=-pHfPJGatgE";
+                iframe.allow = "autoplay";
+                iframe.frameBorder = 0;
+                iframe.style.width = '0';
+                iframe.style.height = '0';
+                iframe.style.position = 'absolute';
+                iframe.style.left = '-9999px';
+                document.getElementById('playerContainer').appendChild(iframe);
+                this.disabled = true;
+                this.textContent = "Música reproducida";
+            }
+        });
+    </script>
+</body>
+
+</html>
